@@ -31,10 +31,10 @@ export default function Hero() {
   return (
     <section id="top" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-secondary-50 via-white to-primary-50 pt-16 lg:pt-20">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-10 md:gap-14 lg:gap-16">
           {/* Text Content */}
           <motion.div
-            className="flex-1 text-center lg:text-left max-w-2xl"
+            className="flex-1 text-center lg:text-left max-w-2xl w-full"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -89,7 +89,7 @@ export default function Hero() {
 
           {/* Profile Image */}
           <motion.div
-            className="flex-1 flex justify-center lg:justify-end max-w-lg"
+            className="flex-1 flex justify-center lg:justify-end w-full max-w-lg"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -99,7 +99,7 @@ export default function Hero() {
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300, damping: 10 }}
             >
-              <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96">
+              <div className="relative w-40 h-40 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 mx-auto">
                 {/* Animated background blur */}
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full blur-2xl opacity-20"

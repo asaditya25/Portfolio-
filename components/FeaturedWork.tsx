@@ -78,7 +78,7 @@ export default function FeaturedWork() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
         >
           {featuredProjects.map((project) => (
             <motion.div
@@ -89,7 +89,7 @@ export default function FeaturedWork() {
               transition={{ duration: 0.3 }}
             >
               {/* Project Image */}
-              <div className="relative h-48 sm:h-56 overflow-hidden">
+              <div className="relative h-40 sm:h-48 md:h-56 lg:h-64 overflow-hidden rounded-xl">
                 <Image
                   src={project.image}
                   alt={project.title}

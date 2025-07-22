@@ -70,13 +70,38 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
         >
           <h2 className="section-title">My Projects</h2>
           <p className="section-subtitle">
             I love to create things, and I'm always working on something new! Here are some of my favorite projects.
           </p>
         </motion.div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          {projects.map((project) => (
+            <motion.div
+              key={project.id}
+              className="card p-6 flex flex-col items-start h-full"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className={`w-12 h-12 mb-4 rounded-full bg-gradient-to-br ${project.color} flex items-center justify-center`}>
+                <project.icon className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-lg md:text-xl font-bold text-secondary-900 mb-2">{project.title}</h3>
+              <p className="text-secondary-600 mb-4 flex-1">{project.description}</p>
+              <div className="flex flex-wrap gap-2 mt-auto">
+                {project.technologies.map((tech) => (
+                  <span key={tech} className="px-3 py-1 bg-primary-100 text-primary-700 text-xs md:text-sm font-medium rounded-full">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
