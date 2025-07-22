@@ -110,8 +110,9 @@ export default function Navbar() {
                     key={item.name}
                     href={item.href}
                     onClick={(e) => {
-                      e.preventDefault()
-                      scrollToSection(item.href)
+                      e.preventDefault();
+                      setIsOpen(false);
+                      setTimeout(() => scrollToSection(item.href), 250);
                     }}
                     className="block px-3 py-3 text-base text-secondary-700 hover:text-primary-600 hover:bg-secondary-50 rounded-lg font-medium transition-colors duration-200"
                     initial={{ opacity: 0, x: -20 }}
