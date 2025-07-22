@@ -3,9 +3,11 @@ import Hero from '@/components/Hero'
 import FeaturedWork from '@/components/FeaturedWork'
 import Projects from '@/components/Projects'
 import Skills from '@/components/Skills'
-import Experience from '@/components/Experience'
-import Contact from '@/components/Contact'
-import Footer from '@/components/Footer'
+import dynamic from 'next/dynamic'
+
+const Experience = dynamic(() => import('@/components/Experience'))
+const Contact = dynamic(() => import('@/components/Contact'))
+const Footer = dynamic(() => import('@/components/Footer'))
 
 export default function Home() {
   return (

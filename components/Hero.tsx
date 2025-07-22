@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { ArrowDownIcon } from '@heroicons/react/24/outline'
+
 import { useEffect, useState } from 'react'
 
 export default function Hero() {
@@ -45,7 +45,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Hey, I'm{' '}
+              Hey, I&apos;m{' '}
               <span className="gradient-text">
                 ADITYA SINGH
               </span>
@@ -57,8 +57,8 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              I'm a passionate software developer who loves creating innovative solutions and bringing ideas to life through code.
-              Here, you can explore my journey and the projects I've built with{' '}
+              I&apos;m a passionate software developer who loves creating innovative solutions and bringing ideas to life through code.
+              Here, you can explore my journey and the projects I&apos;ve built with{' '}
               <span className="text-red-500 text-2xl">❤️</span>
             </motion.p>
 

@@ -3,30 +3,7 @@
 import { motion } from 'framer-motion'
 
 const timeline = [
-  {
-    id: 1,
-    title: 'Senior Software Developer',
-    company: 'Tech Innovation Inc.',
-    period: '2022 - Present',
-    description: 'Led development of scalable web applications serving 100K+ users. Mentored junior developers and implemented best practices.',
-    type: 'work',
-  },
-  {
-    id: 2,
-    title: 'Full Stack Developer',
-    company: 'Digital Solutions Ltd.',
-    period: '2020 - 2022',
-    description: 'Built and maintained multiple client projects using modern JavaScript frameworks and cloud technologies.',
-    type: 'work',
-  },
-  {
-    id: 3,
-    title: 'Software Developer',
-    company: 'StartupXYZ',
-    period: '2019 - 2020',
-    description: 'Developed MVP products and helped scale the platform from 0 to 10K users using React and Node.js.',
-    type: 'work',
-  },
+ 
   {
     id: 4,
     title: 'Bachelor\'s in Computer Science',

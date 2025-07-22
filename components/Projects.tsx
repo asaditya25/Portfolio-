@@ -61,7 +61,9 @@ const projects = [
   },
 ]
 
-export default function Projects() {
+import React from 'react'
+
+const Projects = React.memo(function Projects() {
   return (
     <section id="projects" className="section-padding bg-secondary-50">
       <div className="container">
@@ -74,7 +76,7 @@ export default function Projects() {
         >
           <h2 className="section-title">My Projects</h2>
           <p className="section-subtitle">
-            I love to create things, and I'm always working on something new! Here are some of my favorite projects.
+            I love to create things, and I&apos;m always working on something new! Here are some of my favorite projects.
           </p>
         </motion.div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -103,49 +105,6 @@ export default function Projects() {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <motion.div
-              key={project.id}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ y: -8 }}
-              className="card p-8 text-center group cursor-pointer"
-            >
-              {/* Icon */}
-              <motion.div
-                className={`w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-r ${project.color} p-4 text-white`}
-                whileHover={{ scale: 1.1, rotate: 360 }}
-                transition={{ duration: 0.5 }}
-              >
-                <project.icon className="w-full h-full" />
-              </motion.div>
-
-              {/* Content */}
-              <h3 className="text-xl font-bold text-secondary-900 mb-4 group-hover:text-primary-600 transition-colors duration-200">
-                {project.title}
-              </h3>
-              <p className="text-secondary-600 mb-6 leading-relaxed">
-                {project.description}
-              </p>
-
-              {/* Technologies */}
-              <div className="flex flex-wrap gap-2 justify-center">
-                {project.technologies.map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-3 py-1 bg-primary-100 text-primary-700 text-sm font-medium rounded-full"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
         {/* GitHub Link */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -155,7 +114,7 @@ export default function Projects() {
           className="text-center mt-12"
         >
           <motion.a
-            href="https://github.com/yourusername"
+            href="https://github.com/asaditya25"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary text-lg px-8 py-4 inline-flex items-center gap-3"
@@ -171,4 +130,6 @@ export default function Projects() {
       </div>
     </section>
   )
-}
+})
+
+export default Projects

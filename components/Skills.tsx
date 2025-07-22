@@ -7,6 +7,7 @@ import {
   CircleStackIcon,
   CloudIcon 
 } from '@heroicons/react/24/outline'
+import React from 'react'
 
 const skillCategories = [
   {
@@ -51,7 +52,7 @@ const skillCategories = [
   },
 ]
 
-export default function Skills() {
+const Skills = React.memo(function Skills() {
   return (
     <section id="skills" className="section-padding bg-white">
       <div className="container">
@@ -149,4 +150,6 @@ export default function Skills() {
       </div>
     </section>
   )
-}
+})
+
+export default Skills

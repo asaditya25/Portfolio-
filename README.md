@@ -1,6 +1,6 @@
 # Portfolio Website
 
-A modern, responsive portfolio website inspired by [Zach Jordan's portfolio](https://www.zachjordan.io/), designed specifically for software developers.
+A modern, responsive portfolio website, designed specifically for software developers.
 
 ## Features
 
