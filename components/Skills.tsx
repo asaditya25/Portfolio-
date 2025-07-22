@@ -15,7 +15,6 @@ const skillCategories = [
     color: 'from-blue-500 to-cyan-500',
     skills: [
       'React.js / Next.js',
-      'Vue.js / Nuxt.js',
       'TypeScript / JavaScript',
       'HTML5 / CSS3 / SASS',
       'Tailwind CSS',
@@ -27,10 +26,6 @@ const skillCategories = [
     color: 'from-green-500 to-emerald-500',
     skills: [
       'Node.js / Express',
-      'Python / Django / FastAPI',
-      'Java / Spring Boot',
-      'C# / .NET',
-      'PHP / Laravel',
     ],
   },
   {
@@ -40,9 +35,7 @@ const skillCategories = [
     skills: [
       'PostgreSQL / MySQL',
       'MongoDB',
-      'Redis',
       'Firebase',
-      'Prisma / Sequelize',
     ],
   },
   {
@@ -51,10 +44,9 @@ const skillCategories = [
     color: 'from-orange-500 to-red-500',
     skills: [
       'Docker / Kubernetes',
-      'AWS / Azure / GCP',
+      'AWS / Azure/',
       'CI/CD Pipelines',
       'Git / GitHub Actions',
-      'Terraform',
     ],
   },
 ]

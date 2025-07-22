@@ -30,8 +30,8 @@ const timeline = [
   {
     id: 4,
     title: 'Bachelor\'s in Computer Science',
-    company: 'University of Technology',
-    period: '2015 - 2019',
+    company: 'Bachelor of Engineering - CSE',
+    period: '2021 - 2025',
     description: 'Graduated with honors. Focused on software engineering, algorithms, and data structures. Active in coding competitions.',
     type: 'education',
   },
@@ -123,8 +123,7 @@ export default function Experience() {
         >
           <motion.a
             href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
+            download="Aditya_Singh_Resume.pdf"
             className="btn btn-primary text-lg px-8 py-4 inline-flex items-center gap-3"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
