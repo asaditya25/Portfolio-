@@ -155,29 +155,7 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Scroll indicator */}
-        <motion.div
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
-        >
-          <motion.button
-            onClick={scrollToProjects}
-            className="flex flex-col items-center text-secondary-600 hover:text-primary-600 transition-colors duration-200"
-            animate={{
-              y: [0, 10, 0],
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          >
-            <span className="text-sm font-medium mb-2">Scroll to explore</span>
-            <ArrowDownIcon className="w-5 h-5" />
-          </motion.button>
-        </motion.div>
+        {/* ...removed scroll to explore indicator... */}
       </div>
     </section>
   )
