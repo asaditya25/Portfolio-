@@ -1,0 +1,31 @@
+{
+  "name": "portfolio-advance",
+  "version": "1.0.0",
+  "description": "A modern, responsive portfolio website inspired by [Zach Jordan's portfolio](https://www.zachjordan.io/), designed specifically for software developers.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@heroicons/react": "^2.2.0",
+    "@types/node": "^24.1.0",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "autoprefixer": "^10.4.21",
+    "framer-motion": "^12.23.6",
+    "lucide-react": "^0.525.0",
+    "next": "^15.4.2",
+    "postcss": "^8.5.6",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwindcss": "^3.4.15",
+    "typescript": "^5.8.3"
+  }
+}
