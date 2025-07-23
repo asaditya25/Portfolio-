@@ -65,38 +65,41 @@ import React from 'react'
 
 const Projects = React.memo(function Projects() {
   return (
-    <section id="projects" className="section-padding bg-secondary-50">
-      <div className="container">
+    <section id="projects" className="section-padding bg-gradient-to-br from-gray-900 via-gray-800 to-primary-900">
+      <div className="container mx-auto px-4 max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12 md:mb-16"
+          className="text-center mb-16"
         >
-          <h2 className="section-title">My Projects</h2>
-          <p className="section-subtitle">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 tracking-tight leading-tight font-sans">
+            My Projects
+          </h2>
+          <p className="text-xl md:text-2xl text-secondary-200 max-w-2xl mx-auto font-sans">
             I love to create things, and I&apos;m always working on something new! Here are some of my favorite projects.
           </p>
         </motion.div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {projects.map((project) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+          {projects.slice(0, 5).map((project) => (
             <motion.div
               key={project.id}
-              className="card p-6 flex flex-col items-start h-full"
+              className="bg-gradient-to-br from-gray-800 via-gray-900 to-primary-900 rounded-2xl p-8 shadow-xl border border-primary-800/30 hover:shadow-2xl transition-shadow duration-300 flex flex-col items-start h-full group"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
+              whileHover={{ y: -6, scale: 1.03 }}
             >
-              <div className={`w-12 h-12 mb-4 rounded-full bg-gradient-to-br ${project.color} flex items-center justify-center`}>
+              <div className={`w-12 h-12 mb-4 rounded-full bg-gradient-to-br ${project.color} flex items-center justify-center shadow-lg`}>
                 <project.icon className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-lg md:text-xl font-bold text-secondary-900 mb-2">{project.title}</h3>
-              <p className="text-secondary-600 mb-4 flex-1">{project.description}</p>
+              <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-primary-400 transition-colors duration-200 font-sans">{project.title}</h3>
+              <p className="text-secondary-200 mb-4 flex-1 font-sans leading-relaxed">{project.description}</p>
               <div className="flex flex-wrap gap-2 mt-auto">
                 {project.technologies.map((tech) => (
-                  <span key={tech} className="px-3 py-1 bg-primary-100 text-primary-700 text-xs md:text-sm font-medium rounded-full">
+                  <span key={tech} className="inline-block bg-primary-500/20 text-primary-200 text-xs md:text-sm font-semibold px-3 py-1 rounded-full font-sans">
                     {tech}
                   </span>
                 ))}
@@ -111,13 +114,13 @@ const Projects = React.memo(function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-center mt-12"
+          className="text-center mt-16"
         >
           <motion.a
             href="https://github.com/asaditya25"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-primary text-lg px-8 py-4 inline-flex items-center gap-3"
+            className="btn btn-secondary text-lg px-8 py-4 inline-flex items-center gap-3 font-sans"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

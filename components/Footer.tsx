@@ -10,11 +10,11 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-secondary-900 text-white">
-      <div className="container">
+    <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-primary-900 text-white border-t border-primary-800/30">
+      <div className="container mx-auto px-4 max-w-6xl">
         {/* Main Footer Content */}
-        <div className="py-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="py-14">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {/* Brand Section */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -23,10 +23,10 @@ export default function Footer() {
               transition={{ duration: 0.6 }}
               className="text-center md:text-left"
             >
-              <h3 className="text-2xl font-bold text-white mb-4">
+              <h3 className="text-3xl font-extrabold text-white mb-4 font-sans tracking-tight">
                 ADITYA SINGH
               </h3>
-              <p className="text-secondary-300 leading-relaxed">
+              <p className="text-secondary-200 leading-relaxed font-sans">
                 Passionate software developer creating innovative solutions and bringing ideas to life through code.
               </p>
             </motion.div>
@@ -39,7 +39,7 @@ export default function Footer() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-center"
             >
-              <h4 className="text-lg font-semibold text-white mb-4">
+              <h4 className="text-lg font-semibold text-white mb-4 font-sans">
                 Quick Links
               </h4>
               <nav className="space-y-2">
@@ -148,10 +148,12 @@ export default function Footer() {
           className="border-t border-secondary-800 py-6"
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-secondary-400 text-sm">
-              © {currentYear} ADITYA SINGH. Built with{' '}
-              <span className="text-red-500">❤️</span> using Next.js & Tailwind CSS.
-            </p>
+          <p className="text-secondary-400 text-sm">
+  © {currentYear} ADITYA SINGH. Built with{' '}
+  <span className="text-red-500">❤️</span>{' '}
+  and lots of <span className="text-yellow-600">☕</span> using Next.js & Tailwind CSS.
+</p>
+
             
             <motion.button
               onClick={scrollToTop}

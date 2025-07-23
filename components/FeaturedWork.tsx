@@ -58,8 +58,8 @@ const itemVariants = {
 
 export default function FeaturedWork() {
   return (
-    <section className="section-padding bg-white">
-      <div className="container">
+    <section className="section-padding bg-gradient-to-br from-gray-900 via-gray-800 to-primary-900">
+      <div className="container mx-auto px-4 max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -67,8 +67,10 @@ export default function FeaturedWork() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="section-title">Featured Work</h2>
-          <p className="section-subtitle">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 tracking-tight leading-tight font-sans">
+            Featured Work
+          </h2>
+          <p className="text-xl md:text-2xl text-secondary-200 max-w-2xl mx-auto font-sans">
             Here are some of my most impactful projects that showcase my skills and passion for creating innovative solutions.
           </p>
         </motion.div>
@@ -78,14 +80,14 @@ export default function FeaturedWork() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10"
         >
           {featuredProjects.map((project) => (
             <motion.div
               key={project.id}
               variants={itemVariants}
-              className="group card overflow-hidden"
-              whileHover={{ y: -8 }}
+              className="group overflow-hidden bg-gradient-to-br from-gray-800 via-gray-900 to-primary-900 rounded-2xl shadow-xl border border-primary-800/30 hover:shadow-2xl transition-shadow duration-300"
+              whileHover={{ y: -8, scale: 1.03 }}
               transition={{ duration: 0.3 }}
             >
               {/* Project Image */}
@@ -99,7 +101,6 @@ export default function FeaturedWork() {
                   priority={false}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                
                 {/* Hover overlay with links */}
                 <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <motion.a
@@ -122,23 +123,17 @@ export default function FeaturedWork() {
                   </motion.a>
                 </div>
               </div>
-
               {/* Project Content */}
               <div className="p-6">
-                <h3 className="text-xl font-bold text-secondary-900 mb-3 group-hover:text-primary-600 transition-colors duration-200">
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-primary-400 transition-colors duration-200 font-sans">
                   {project.title}
                 </h3>
-                <p className="text-secondary-600 mb-4 leading-relaxed">
+                <p className="text-secondary-200 mb-4 font-sans">
                   {project.description}
                 </p>
-                
-                {/* Technologies */}
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 bg-primary-100 text-primary-700 text-sm font-medium rounded-full"
-                    >
+                    <span key={tech} className="inline-block bg-primary-500/20 text-primary-200 text-xs font-semibold px-3 py-1 rounded-full font-sans">
                       {tech}
                     </span>
                   ))}

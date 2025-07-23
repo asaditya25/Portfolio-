@@ -29,18 +29,18 @@ export default function Hero() {
   if (!mounted) return null
 
   return (
-    <section id="top" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-secondary-50 via-white to-primary-50 pt-16 lg:pt-20">
-      <div className="container mx-auto px-4">
+    <section id="top" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-primary-900 pt-16 lg:pt-20">
+      <div className="container mx-auto px-4 max-w-6xl">
         <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-10 md:gap-14 lg:gap-16">
           {/* Text Content */}
           <motion.div
-            className="flex-1 text-center lg:text-left max-w-2xl w-full"
+            className="flex-1 text-center lg:text-left max-w-2xl w-full font-sans"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <motion.h1
-              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-secondary-900 mb-6"
+              className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold text-white mb-8 tracking-tight leading-tight font-sans"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -52,7 +52,7 @@ export default function Hero() {
             </motion.h1>
 
             <motion.p
-              className="text-lg md:text-xl lg:text-2xl text-secondary-600 mb-8 lg:mb-10 leading-relaxed"
+              className="text-xl md:text-2xl lg:text-3xl text-secondary-200 mb-10 lg:mb-12 leading-relaxed max-w-2xl mx-auto font-sans"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
@@ -63,7 +63,7 @@ export default function Hero() {
             </motion.p>
 
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-6"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}

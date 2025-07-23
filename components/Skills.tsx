@@ -54,8 +54,8 @@ const skillCategories = [
 
 const Skills = React.memo(function Skills() {
   return (
-    <section id="skills" className="section-padding bg-white">
-      <div className="container">
+    <section id="skills" className="section-padding bg-gradient-to-br from-gray-900 via-gray-800 to-primary-900">
+      <div className="container mx-auto px-4 max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -63,8 +63,10 @@ const Skills = React.memo(function Skills() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="section-title">Technical Skills</h2>
-          <p className="section-subtitle">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 tracking-tight leading-tight font-sans">
+            Technical Skills
+          </h2>
+          <p className="text-xl md:text-2xl text-secondary-200 max-w-2xl mx-auto font-sans">
             Here are the technologies and tools I work with to build amazing digital experiences.
           </p>
         </motion.div>
@@ -78,11 +80,11 @@ const Skills = React.memo(function Skills() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -8 }}
-              className="card p-6 text-center group"
+              className="bg-gradient-to-br from-gray-800 via-gray-900 to-primary-900 rounded-2xl p-8 shadow-xl border border-primary-800/30 hover:shadow-2xl transition-shadow duration-300 text-center group"
             >
               {/* Icon */}
               <motion.div
-                className={`w-14 h-14 mx-auto mb-6 rounded-lg bg-gradient-to-r ${category.color} p-3 text-white`}
+                className={`w-14 h-14 mx-auto mb-6 rounded-lg bg-gradient-to-r ${category.color} p-3 text-white shadow-lg`}
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 transition={{ duration: 0.3 }}
               >
@@ -90,7 +92,7 @@ const Skills = React.memo(function Skills() {
               </motion.div>
 
               {/* Title */}
-              <h3 className="text-xl font-bold text-secondary-900 mb-6 group-hover:text-primary-600 transition-colors duration-200">
+              <h3 className="text-xl font-bold text-white mb-6 group-hover:text-primary-400 transition-colors duration-200 font-sans">
                 {category.title}
               </h3>
 
@@ -103,7 +105,7 @@ const Skills = React.memo(function Skills() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: (index * 0.1) + (skillIndex * 0.05) }}
-                    className="text-secondary-600 font-medium py-2 px-3 rounded-lg hover:bg-secondary-50 transition-colors duration-200 border-l-2 border-transparent hover:border-primary-500"
+                    className="text-secondary-200 font-medium py-2 px-3 rounded-lg hover:bg-primary-900/40 transition-colors duration-200 border-l-2 border-transparent hover:border-primary-400 font-sans"
                   >
                     {skill}
                   </motion.li>

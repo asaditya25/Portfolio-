@@ -101,8 +101,8 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="section-padding bg-white">
-      <div className="container">
+    <section id="contact" className="section-padding bg-gradient-to-br from-gray-900 via-gray-800 to-primary-900">
+      <div className="container mx-auto px-4 max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -110,8 +110,10 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 md:mb-16"
         >
-          <h2 className="section-title">Contact Me</h2>
-          <p className="section-subtitle">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 tracking-tight leading-tight font-sans">
+            Contact Me
+          </h2>
+          <p className="text-xl md:text-2xl text-secondary-200 max-w-2xl mx-auto font-sans">
             Let&apos;s work together on your next project! I&apos;m always open to discussing new opportunities.
           </p>
         </motion.div>
@@ -123,13 +125,13 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="space-y-6"
+            className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-bold text-secondary-900 mb-6">
+              <h3 className="text-2xl font-bold text-white mb-6 font-sans">
                 Get In Touch
               </h3>
-              <p className="text-secondary-600 text-lg leading-relaxed mb-8">
+              <p className="text-secondary-200 text-lg leading-relaxed mb-8 font-sans">
                 I&apos;m currently available for freelance work and full-time opportunities. 
                 If you have a project in mind or just want to chat about technology, 
                 feel free to reach out!
@@ -147,14 +149,14 @@ export default function Contact() {
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   className="flex items-center gap-4 group"
                 >
-                  <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center group-hover:bg-primary-200 transition-colors duration-200">
-                    <item.icon className="w-6 h-6 text-primary-600" />
+                  <div className="w-12 h-12 bg-primary-500/20 rounded-lg flex items-center justify-center group-hover:bg-primary-500/40 transition-colors duration-200">
+                    <item.icon className="w-6 h-6 text-primary-400" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-secondary-900">{item.title}</h4>
+                    <h4 className="font-semibold text-white font-sans">{item.title}</h4>
                     <a
                       href={item.href}
-                      className="text-secondary-600 hover:text-primary-600 transition-colors duration-200"
+                      className="text-secondary-200 hover:text-primary-400 transition-colors duration-200 font-sans"
                     >
                       {item.value}
                     </a>
