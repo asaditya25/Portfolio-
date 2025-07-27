@@ -33,60 +33,24 @@ export default function Experience() {
           </p>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto">
-          {/* Timeline */}
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-8 md:left-1/2 transform md:-translate-x-0.5 w-0.5 h-full bg-primary-400/40" />
-
-            {timeline.map((item, index) => (
-              <motion.div
-                key={item.id}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                className={`relative flex items-center mb-14 ${
-                  index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                }`}
-              >
-                {/* Timeline marker */}
-                <div className="absolute left-8 md:left-1/2 transform -translate-x-1/2 w-5 h-5 bg-primary-500 rounded-full border-4 border-white shadow-2xl z-10" />
-
-                {/* Content */}
-                <div className={`w-full md:w-5/12 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'} ml-16 md:ml-0`}>
-                  <motion.div
-                    className="bg-gradient-to-br from-gray-800 via-gray-900 to-primary-900 rounded-2xl p-8 shadow-xl border border-primary-800/30 hover:shadow-2xl transition-shadow duration-300"
-                    whileHover={{ y: -6, scale: 1.03 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className={`w-3 h-3 rounded-full ${
-                        item.type === 'work' ? 'bg-green-400' : 'bg-blue-400'
-                      }`} />
-                      <span className={`text-sm font-semibold ${
-                        item.type === 'work' ? 'text-green-300' : 'text-blue-300'
-                      } font-sans tracking-wide uppercase`}>
-                        {item.type === 'work' ? 'Work Experience' : 'Education'}
-                      </span>
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-2 font-sans">
-                      {item.title}
-                    </h3>
-                    <p className="text-primary-400 font-semibold mb-3 font-sans">
-                      {item.company} • {item.period}
-                    </p>
-                    <p className="text-secondary-200 leading-relaxed font-sans">
-                      {item.description}
-                    </p>
-                  </motion.div>
-                </div>
-
-                {/* Spacer for alternating layout */}
-                <div className="hidden md:block w-2/12" />
-              </motion.div>
-            ))}
-          </div>
+        <div className="max-w-2xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="bg-gradient-to-br from-gray-800 via-gray-900 to-primary-900 rounded-2xl p-8 shadow-xl border border-primary-800/30"
+          >
+            <h3 className="text-2xl font-bold text-white mb-2 font-sans">
+              {timeline[0].title}
+            </h3>
+            <p className="text-primary-400 font-semibold mb-3 font-sans">
+              {timeline[0].company} • {timeline[0].period}
+            </p>
+            <p className="text-secondary-200 leading-relaxed font-sans">
+              {timeline[0].description}
+            </p>
+          </motion.div>
         </div>
 
         {/* Call to action */}

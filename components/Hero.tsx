@@ -115,12 +115,12 @@ export default function Hero() {
                 />
                 
                 {/* Profile image */}
-                <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white shadow-2xl">
+                <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white shadow-2xl flex items-center justify-center">
                   <Image
                     src="/img/profile.jpg"
                     alt="ADITYA SINGH - Software Developer"
                     fill
-                    className="object-cover"
+                    className="object-cover object-top rounded-full"
                     priority
                     sizes="(max-width: 768px) 288px, (max-width: 1024px) 320px, 384px"
                   />

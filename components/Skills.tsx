@@ -44,8 +44,7 @@ const skillCategories = [
     icon: CloudIcon,
     color: 'from-orange-500 to-red-500',
     skills: [
-      'Docker / Kubernetes',
-      'AWS / Azure/',
+      
       'CI/CD Pipelines',
       'Git / GitHub Actions',
     ],
@@ -128,12 +127,9 @@ const Skills = React.memo(function Skills() {
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
             {[
-              'Machine Learning',
-              'GraphQL',
-              'Web3',
-              'Mobile Development',
+              'Data Structures & Algorithms',
+              'System Design Basics',
               'Data Science',
-              'Microservices',
             ].map((skill, index) => (
               <motion.span
                 key={skill}
