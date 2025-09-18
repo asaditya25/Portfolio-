@@ -149,9 +149,7 @@ export default function Footer() {
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-secondary-400 text-sm">
-  © {currentYear} ADITYA SINGH. Built with{' '}
-  <span className="text-red-500">❤️</span>{' '}
-  and lots of <span className="text-yellow-600">☕</span> using Next.js & Tailwind CSS.
+  © {currentYear} ADITYA SINGH.
 </p>
 
             
