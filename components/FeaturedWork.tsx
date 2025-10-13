@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline'
+import { ShoppingCartIcon } from 'lucide-react'
 
 const featuredProjects = [
   {
@@ -29,6 +30,15 @@ const featuredProjects = [
     description: 'A comprehensive tool for analyzing sales data during the Diwali season using advanced data visualization techniques.',
     image: '/img/featured-3.png',
     technologies: ['Python', 'Matplotlib', 'Jupyter', 'Pandas'],
+    link: '#',
+    github: '#',
+  },
+  {
+    id: 4,
+    title: 'AI-Task-Manager',
+    description: 'An AI-powered task management tool that helps users organize and prioritize their tasks effectively.',
+    image: '/img/featured-4.png',
+    technologies: ['Next.js', 'TypeScript', 'React', 'Tailwind CSS'],
     link: '#',
     github: '#',
   },

@@ -3,11 +3,11 @@
 import { motion } from 'framer-motion'
 import { 
   GlobeAltIcon, 
-  DevicePhoneMobileIcon, 
-  CodeBracketIcon,
+  MusicalNoteIcon, 
+  EyeIcon,
   ChartBarIcon,
-  ShoppingCartIcon,
-  CloudIcon 
+  ComputerDesktopIcon,
+  ClipboardDocumentListIcon 
 } from '@heroicons/react/24/outline'
 
 const projects = [
@@ -23,7 +23,7 @@ const projects = [
     id: 2,
     title: 'Music Store analysis using SQL',
     description: 'Data analysis project using SQL to extract insights from a music store database',
-    icon: DevicePhoneMobileIcon,
+    icon: MusicalNoteIcon,
     technologies: ['SQL', 'PostgreSQL', 'Data Analysis'],
     color: 'from-purple-500 to-pink-500',
   },
@@ -31,7 +31,7 @@ const projects = [
     id: 3,
     title: 'Drowsiness Detection System',
     description: 'Real-time drowsiness detection system using computer vision and machine learning',
-    icon: CodeBracketIcon,
+    icon: EyeIcon,
     technologies: ['Python', 'OpenCV', 'DLiB'],
     color: 'from-green-500 to-emerald-500',
   },
@@ -47,17 +47,17 @@ const projects = [
     id: 5,
     title: 'Portfolio Website',
     description: 'A personal portfolio website showcasing my projects and skills.',
-    icon: ShoppingCartIcon,
+    icon: ComputerDesktopIcon,
     technologies: ['Next.js', 'TypeScript', 'React'],
     color: 'from-indigo-500 to-blue-500',
   },
   {
     id: 6,
-    title: 'Cloud Infrastructure',
-    description: 'Automated deployment pipeline and cloud architecture',
-    icon: CloudIcon,
-    technologies: ['AWS', 'Docker', 'Terraform'],
-    color: 'from-teal-500 to-green-500',
+    title: 'AI-Task-Manager',
+    description: 'An AI-powered task management tool that helps users organize and prioritize their tasks effectively.',
+    icon: ClipboardDocumentListIcon,
+    technologies: ['Next.js', 'TypeScript', 'React', 'Tailwind CSS'],
+    color: 'from-purple-500 to-indigo-500',
   },
 ]
 
@@ -82,7 +82,7 @@ const Projects = React.memo(function Projects() {
           </p>
         </motion.div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-          {projects.slice(0, 5).map((project) => (
+          {projects.map((project) => (
             <motion.div
               key={project.id}
               className="bg-gradient-to-br from-gray-800 via-gray-900 to-primary-900 rounded-2xl p-8 shadow-xl border border-primary-800/30 hover:shadow-2xl transition-shadow duration-300 flex flex-col items-start h-full group"
